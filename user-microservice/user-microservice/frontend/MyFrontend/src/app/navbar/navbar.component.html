@@ -1,0 +1,17 @@
+<mat-toolbar color='primary'>Avis Flight Booking Services
+
+    <div class="spacer"></div>
+    <!-- <a mat-button routerLink="/home">Home</a> -->
+    <a mat-button (click)="verify1()">Home</a>
+    <a mat-button (click)="verify()">Admin</a>
+    <a mat-button (click)="send()" routerLink="/search">Search</a>
+    <a mat-button routerLink="/register">Sign Up</a>
+
+
+    <a mat-button  *ngIf="!auth.loggedIn()" routerLink="/login">Login</a>
+    <a mat-button  *ngIf="auth.loggedIn()" routerLink="/login" (click)="auth.logoutUser()">Logout</a>
+    <!-- <a mat-button (click)="rem()" routerLink="/login">Logout</a>  -->
+
+
+</mat-toolbar>
+ 

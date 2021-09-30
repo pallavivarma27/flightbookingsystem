@@ -1,0 +1,13 @@
+button
+{
+    margin-left: 48%;
+    background-color: rgb(255, 123, 123);
+    color: rgb(5, 0, 0);
+    height: 30px;
+    width:80px;
+    border-radius: 5px;
+}
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qAJac7KJNjqLiYPsVQx2fkbJs3WFkAD2Vw&usqp=CAU");
+    background-color: #cccccc;
+   }

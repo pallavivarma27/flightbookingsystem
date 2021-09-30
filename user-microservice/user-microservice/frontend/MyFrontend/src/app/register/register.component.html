@@ -1,0 +1,20 @@
+
+  
+ <div fxLayoutAlign="center center" >  
+    <mat-card fxFlex="45">
+        <mat-toolbar >Sign Up</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="RegisterForm" (ngSubmit)="submitData()">
+
+        <mat-form-field> 
+                <input  required name="registerObj.email"   matInput type="email" formControlName="email" class="form-control"  [(ngModel)]='registerObj.email' placeholder="Enter Your Email">
+                
+        </mat-form-field>
+        <mat-form-field>
+               <input required matInput type="password" formControlName="pwd" class="form-control" name="registerObj.pwd" [(ngModel)]='registerObj.pwd' placeholder="Enter Your Password">
+        </mat-form-field>
+           <button [disabled]="RegisterForm.invalid" mat-button type="button" (click)='sendData()' routerLink="/register" color="primary">Sign Up</button>
+        </form>
+    </mat-card>
+</div>
+ 
+ 

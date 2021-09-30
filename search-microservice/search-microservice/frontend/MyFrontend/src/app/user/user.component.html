@@ -1,0 +1,94 @@
+<html>
+<head></head>
+<body >
+  <div class="position">
+    <div class="modify">
+      <body  bgcolor="lavender"></body>
+      <h2> Book Your Flights Now</h2> 
+    </div>
+    <br>
+  </div>
+  <div class="position2">
+    <b>Departure_Date:</b><input type="date" [(ngModel)]='departure' id="id" value="departure" placeholder="Enter your departure date">
+
+  </div><br>
+  
+
+
+
+  <form class="position">
+      
+    <mat-form-field >
+      <label ><b>From:</b></label>
+      <mat-label></mat-label>
+      <select matNativeControl [(ngModel)]='selectedvalue1' name="flight"> 
+        <option value="" selected></option>
+        <option *ngFor="let flight of flights" [value]="flight.value" >
+          {{flight.viewValue}}
+        </option>
+      </select>
+    </mat-form-field><br> 
+    
+
+    <mat-form-field >
+      <label><b>To:</b></label>
+      <mat-label></mat-label>
+      <select matNativeControl [(ngModel)]='selectedvalue' name="flight"> 
+        <option value="" selected></option>
+        <option *ngFor="let flight of flights1" [value]="flight.value" >
+          {{flight.viewValue}}
+        </option>
+      </select>
+    </mat-form-field><br>
+
+  
+    <mat-form-field >
+      <label><b>Type:</b></label>
+      <mat-label></mat-label>
+      <select matNativeControl [(ngModel)]='selectedvalue2' name="flight"> 
+        <option value="" selected></option>
+        <option *ngFor="let flight of type11" [value]="flight.value" >
+          {{flight.viewValue}}
+        </option>
+      </select>
+    </mat-form-field>
+    <br><br>
+    <button (click)='getData()' >Search</button> <br>
+  
+  </form>
+    
+
+    
+    
+    
+
+    <br><br>
+  
+
+  <div class="position1" >
+
+    <table border="10">
+      <tr>
+        <th>Flight_Id</th>
+        <th>Flight_Name</th>
+        <th>Departure</th>
+        <th>Arrival</th>
+        <th>Departure_Date</th>
+        <th>Ticket Fare</th>
+        <th>Class</th>
+      </tr>
+      <tr *ngFor="let item of api.users">
+        <td>{{item.Flight_id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.starting}}</td>
+        <td>{{item.ending}}</td>
+        <td>{{item.departure}}</td>
+        <td>{{item.total}}</td>
+        <td>{{item.type1}}</td>
+        <button (click)="send()">Book Flight</button>
+      </tr>
+    </table>
+   
+  </div>
+</body>
+</html>

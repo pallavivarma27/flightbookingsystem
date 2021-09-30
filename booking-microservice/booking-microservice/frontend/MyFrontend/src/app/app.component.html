@@ -1,0 +1,22 @@
+<app-navbar>  </app-navbar>
+
+
+<div fxLayoutAlign="center center">
+  <mat-card fxFlex="25">
+    <form [formGroup]="Paymentform" (ngSubmit)="submitData()">
+        <google-pay-button
+              environment="TEST"
+              buttontype="buy"
+              buttonColor="white"
+              [paymentRequest]="paymentRequest"
+              (loadpaymentdata)="onLoadPaymentData($event)">
+        </google-pay-button><br>
+        <mat-form-field>
+        <input  matInput type="text" formControlName="Sec" class="form-control" name="registerObj.Sec"  [(ngModel)]='registerObj.Sec' placeholder="Enter GET for Booking ID"><br>
+        </mat-form-field><br>
+        <button mat-button type="button" [disabled]="Paymentform.invalid" (click)="Book_id()">GET BOOKING ID</button><br>
+        <button mat-button type="button" [disabled]="Paymentform.invalid" (click)="serve()">CHECK-IN</button><br>
+    </form>
+  </mat-card>
+</div>
+<router-outlet></router-outlet> 

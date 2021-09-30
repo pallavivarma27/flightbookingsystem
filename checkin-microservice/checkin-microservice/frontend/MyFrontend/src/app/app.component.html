@@ -1,0 +1,16 @@
+<app-navbar>  </app-navbar>
+
+
+
+
+<div fxLayoutAlign="center center">
+  <mat-card fxFlex="25">
+      <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="CheckInform" >
+        <mat-form-field>
+        <input  required matInput type="text" formControlName="num" class="form-control" name="registerObj.num"  [(ngModel)]='registerObj.num' placeholder="Enter Booking Id"> 
+      </mat-form-field><br>
+        <button mat-button type="button"   (click)="check()">CheckIn</button>
+      </form>
+    </mat-card>
+</div>
+<router-outlet></router-outlet> 

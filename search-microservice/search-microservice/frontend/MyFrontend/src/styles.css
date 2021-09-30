@@ -1,0 +1,8 @@
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    background-image: url("https://www.teahub.io/photos/full/2-27242_pink-clouds-wallpaper-4k.jpg");
+    background-color: #cccccc;
+}

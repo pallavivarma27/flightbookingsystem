@@ -1,0 +1,21 @@
+
+
+<body style="background-color:pink;">
+    
+   
+<div fxLayoutAlign="center center" > 
+    <mat-card fxFlex="25">
+        <mat-toolbar >Login</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="LoginForm" (ngSubmit)="submitData()">
+            <mat-form-field> 
+                <input required matInput type="text" name="registerObj.email" formControlName="email" class="form-control" [(ngModel)]='loginObj.email' placeholder="Enter Your Email">
+            </mat-form-field>
+
+            <mat-form-field>
+               <input required matInput type="password" name="registerObj.pwd" formControlName="pwd" class="form-control" [(ngModel)]='loginObj.pwd' placeholder="Enter Your Password">
+           </mat-form-field>
+           <button [disabled]="LoginForm.invalid" mat-button type="button" (click)='login()' color="primary">Login</button>
+           
+        </form>
+    </mat-card> 
+</div>
